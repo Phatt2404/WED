@@ -1,0 +1,311 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+:root {
+  --navy: #1a1a3a;
+  --gold: #f7b731;
+  --white: #fefefe;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--white);
+  color: var(--navy);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  color: var(--navy);
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-navy {
+  background-color: var(--navy);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+/* Header Styles */
+.navbar-brand {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.nav-link {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--gold) !important;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-banner {
+  min-height: 60vh;
+  background: linear-gradient(rgba(26, 26, 58, 0.8), rgba(26, 26, 58, 0.8)), url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 1s ease-out forwards;
+}
+
+.animate-bounce {
+  animation: bounce 2s ease infinite;
+}
+
+.animate-scale {
+  animation: scale 0.5s ease forwards;
+}
+
+/* Cards */
+.card {
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Member Images */
+.member-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.member-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(26, 26, 58, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Social Media Icons */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--navy);
+  color: var(--white);
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  background-color: var(--gold);
+  color: var(--navy);
+  transform: translateY(-5px);
+}
+
+/* Skills Progress */
+.skill-progress {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e9ecef;
+  margin-bottom: 20px;
+}
+
+.skill-progress-bar {
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--gold);
+  transition: width 1s ease-in-out;
+}
+
+/* Form Elements */
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 0.25rem rgba(247, 183, 49, 0.25);
+}
+
+.btn {
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--navy);
+  border-color: var(--navy);
+}
+
+.btn-primary:hover {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table thead th {
+  background-color: var(--navy);
+  color: var(--white);
+  border: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(247, 183, 49, 0.1);
+}
+
+/* Project Cards */
+.project-card {
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  transition: all 0.5s ease-in-out;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .hero-banner {
+    min-height: 50vh;
+  }
+}
+.member-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
+  background-color: #f4f4f4; /* thêm nền trung tính nếu ảnh không phủ hết khung */
+  border-radius: 10px;
+}
